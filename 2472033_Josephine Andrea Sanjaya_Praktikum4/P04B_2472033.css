@@ -1,0 +1,66 @@
+body{
+    background-image: url("img/certificate_bg.avif");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.nomor_sertifikat{
+    font-size: 35px;
+    color: black;
+    margin-top: 70px;
+    margin-bottom: 0;
+}
+
+.title{
+    font-size: 60px;
+    color: #2d456e;
+    margin-top: 7px;
+    margin-bottom: 0;
+}
+
+.keterangan {
+    font-size: 30px;
+    color:#3f4650;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.nama_siswa{
+    font-size: 55px;
+    color: #951f1d;
+    font-weight: bold;
+    margin-bottom: 0;
+    margin-top: 40px;
+}
+
+.nama_dosen{
+    font-size: 30px;
+    color: #951f1d;
+    font-weight: bold;
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+
+.first-line{
+    width: 1300px;
+}
+
+.second-line{
+    width: 450px;
+}
+
+.content{
+    text-align: center;
+    font-size: smaller
+}
+
+.ket2{
+    font-size: 25px;
+    color: black;
+    letter-spacing: 2px;
+}
+
+.bagian_bawah{
+    margin-top: 90px;
+}
