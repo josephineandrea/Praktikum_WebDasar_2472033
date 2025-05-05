@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MySquare</title>
+    <style>
+        body{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-align: center;
+        }
+
+        #mySquare{
+            color: white;
+            text-align: center;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <h3>Persegi Buatanmu</h3>
+    <div id="mySquare">
+        <div id="content"></div>
+    </div>
+    <script>
+        let border = prompt("Border persegi (misal: 1)");
+        let tinggi = prompt("Tinggi persegi (px):");
+        let lebar = prompt("Lebar persegi (px):");
+        let warna = prompt("Warna persegi (misal: red, blue, #00ff00)");
+        let isi = prompt("isi persegi (misal: Hello World):")
+
+        let square = document.querySelector("#mySquare");
+        square.style.border = border,"solid black";
+        square.style.height = tinggi + "px";
+        square.style.width = lebar + "px";
+        square.style.background = warna;
+
+        let text = document.querySelector("#content");
+        text.innerHTML = isi;
+    </script>
+    <p>&copy; [2472033] - [Josephine Andrea Sanjaya]</p>
+</body>
+</html>

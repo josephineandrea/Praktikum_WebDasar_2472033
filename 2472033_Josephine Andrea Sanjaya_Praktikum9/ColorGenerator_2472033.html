@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Generator</title>
+    <style>
+        #cGenerator{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-align: center;
+            background-color: white;
+        }
+
+        h3{
+            margin: 0;
+            margin-bottom: 10px;
+        }
+
+        .colorGenerator{
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 6px;
+            background-color: white;
+        }
+
+        .container{
+            height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .content{
+            padding: 15px 30px;
+        }
+
+        .button{
+            padding: 5px 20px;
+        }
+
+        .button:hover{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body id="cGenerator">
+    <div class="container">
+        <div class="colorGenerator">
+            <div class="content">
+                <h3>Color Generator</h3>
+                <button onclick="colorG()" class="button">Generate</button>
+                <div id="hex"></div>
+            </div>
+        </div>
+    </div>
+    <script src="ColorGenerator.js"></script>
+</body>
+</html>
