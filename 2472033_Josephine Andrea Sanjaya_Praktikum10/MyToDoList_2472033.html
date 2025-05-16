@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My To-Do List</title>
+    <style>
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: #F5F5F5;
+            color: white;
+        }
+
+        h2,p{
+            margin: 0;
+        }
+
+        p{
+            margin-top: 50px;
+        }
+
+        .container{
+            display: flex;
+            justify-content: center;
+        }
+
+        .square{
+            background-color: #4A90E2;
+            padding-top: 25px;
+            padding-left: 35px;
+            padding-right: 35px;
+            padding-bottom: 60px;
+            border-radius: 10px;
+            width: 400px;
+        }
+
+        .header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .btn-tambah{
+            background-color: #50C878;
+            border: none;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="square">
+            <div class="header">
+                <h2>My To-Do List</h2>
+                <button class="btn-tambah">Tambah +</button>
+            </div>
+            <ul class="isi"></ul>
+            <div class="footer">
+                <p>&copy; [2472033] - [Josephine Andrea Sanjaya]</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="MyToDoList_2472033.js"></script>
+</body>
+</html>
