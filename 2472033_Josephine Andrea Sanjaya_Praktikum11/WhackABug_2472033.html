@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whack A Bug</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        .bug{
+            width: 40px;
+            position: absolute;
+        }
+
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            height: 600px;
+        }
+
+        .keterangan{
+            text-align: center;
+        }
+
+        p{
+            margin: 5px;
+        }
+
+        .text{
+            position: fixed;
+            bottom: 20px;
+        }
+
+        .lastPage{
+            background-color: black;
+            color: white;
+            text-align: center;
+            margin-top: 250px;
+        }
+    </style>
+
+    <script>
+        $(document).ready(()=>{
+            let second = 5;
+            let waktu = $(".detik");
+            let score = 0;
+            let countDown = setInterval(updateTime, 1000);
+            
+            function updateTime(){
+                if(second >=0){
+                    waktu.html(second + "s");
+                    second--;
+                } else {
+                    clearInterval(countDown);
+                    clearInterval(kemunculanBug);
+                    $("body").css({"background-color":"black"});
+                    $(".keterangan").html(`<h1 class="lastPage">Final Score : ${score}</h1>`)
+                } 
+            }
+
+            function munculBug(){
+                let left = Math.floor(Math.random() * window.innerWidth);
+                let top = Math.floor(Math.random() * window.innerHeight);
+
+                let kepik = $("<img src='img/Bug.png' alt='' class='bug'>");
+
+                kepik.css({"left":`${left}px`,"top":`${top}px`});
+
+                kepik.click(()=>{
+                    score += 1;
+                    $(".score").html("Score : " + score);
+                    kepik.remove();
+                })
+
+                $(".keterangan").append(kepik);
+            }
+
+            let kemunculanBug = setInterval(munculBug, 400);
+        })
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="keterangan">
+            <div class="text">
+                <p class="ketWaktu">Time Left : <span class="detik">5s</span></p>
+                <p class="score">Score : 0</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

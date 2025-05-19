@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Increment</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        .square{
+            border: 5px solid black;
+            padding: 20px;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            font-size: 40px;
+            margin-right: 25px;
+
+        }
+
+        .content{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 600px;
+        }
+    </style>
+
+    <script>
+        $(document).ready(()=>{
+            let kotak1 = 0;
+            let kotak2 = 0;
+            let kotak3 = 0;
+            let kotak4 = 0;
+            let kotak5 = 0;
+            
+            $("#satu").click(()=>{
+                kotak1 += 1;
+                if(kotak1 != 0){
+                    $("#satu").html(kotak1);
+                    $("#satu").css({"background-color":"green","color":"white"});
+                } else{
+                    $("#satu").html(kotak1);
+                    $("#satu").css({"background-color":"white","color":"black"});
+                }
+            })
+
+            $("#dua").click(()=>{
+                kotak2 += 1;
+                if(kotak2 != 0){
+                    $("#dua").html(kotak2);
+                    $("#dua").css({"background-color":"green","color":"white"});
+                } else{
+                    $("#dua").html(kotak2);
+                    $("#dua").css({"background-color":"white","color":"black"});
+                } 
+            })
+
+            $("#tiga").click(()=>{
+                kotak3 += 1;
+                if(kotak3 != 0){
+                    $("#tiga").html(kotak3);
+                    $("#tiga").css({"background-color":"green","color":"white"});
+                } else{
+                    $("#tiga").html(kotak3);
+                    $("#tiga").css({"background-color":"white","color":"black"});
+                }
+            })
+
+            $("#empat").click(()=>{
+                kotak4 += 1;
+                if(kotak4 != 0){
+                    $("#empat").html(kotak4);
+                    $("#empat").css({"background-color":"green","color":"white"});
+                } else{
+                    $("#empat").html(kotak4);
+                    $("#empat").css({"background-color":"white","color":"black"});
+                } 
+            })
+
+            $("#lima").click(()=>{
+                kotak5 += 1;
+                if(kotak5 != 0){
+                    $("#lima").html(kotak5);
+                    $("#lima").css({"background-color":"green","color":"white"});
+                } else{
+                    $("#lima").html(kotak5);
+                    $("#lima").css({"background-color":"white","color":"black"});
+                }
+            })
+
+            $("#satu").contextmenu((e)=>{
+                e.preventDefault();
+                kotak1 -= 1;
+                if(kotak1 != 0){
+                    $("#satu").html(kotak1);
+                    $("#satu").css({"background-color":"rgb(190, 0, 0)","color":"white"});
+                } else{
+                    $("#satu").html(kotak1);
+                    $("#satu").css({"background-color":"white","color":"black"});
+                }
+            })
+
+            $("#dua").contextmenu((e)=>{
+                e.preventDefault();
+                kotak2 -= 1;
+                if(kotak2 != 0){
+                    $("#dua").html(kotak2);
+                    $("#dua").css({"background-color":"rgb(190, 0, 0)","color":"white"});
+                } else{
+                    $("#dua").html(kotak2);
+                    $("#dua").css({"background-color":"white","color":"black"});
+                }
+            })
+
+            $("#tiga").contextmenu((e)=>{
+                e.preventDefault();
+                kotak3 -= 1;
+                if(kotak3 != 0){
+                    $("#tiga").html(kotak3);
+                    $("#tiga").css({"background-color":"rgb(190, 0, 0)","color":"white"});
+                } else{
+                    $("#tiga").html(kotak3);
+                    $("#tiga").css({"background-color":"white","color":"black"});
+                }
+            })
+
+            $("#empat").contextmenu((e)=>{
+                e.preventDefault();
+                kotak4 -= 1;
+                if(kotak4 != 0){
+                    $("#empat").html(kotak4);
+                    $("#empat").css({"background-color":"rgb(190, 0, 0)","color":"white"});
+                } else{
+                    $("#empat").html(kotak4);
+                    $("#empat").css({"background-color":"white","color":"black"});
+                }
+            })
+
+            $("#lima").contextmenu((e)=>{
+                e.preventDefault();
+                kotak5 -= 1;
+                if(kotak5 != 0){
+                    $("#lima").html(kotak5);
+                    $("#lima").css({"background-color":"rgb(190, 0, 0)","color":"white"});
+                } else{
+                    $("#lima").html(kotak5);
+                    $("#lima").css({"background-color":"white","color":"black"});
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="square" id="satu">0</div>
+            <div class="square" id="dua">0</div>
+            <div class="square" id="tiga">0</div>
+            <div class="square" id="empat">0</div>
+            <div class="square" id="lima">0</div>
+        </div>
+    </div>
+</body>
+</html>

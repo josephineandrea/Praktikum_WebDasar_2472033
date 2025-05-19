@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #F0F2F5;
+            color: #333333;
+        }
+
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .content{
+            text-align: center;
+            display: block;
+        }
+
+        .pushbtn, .popbtn{
+            background-color: #4caf50;
+            color: white;
+            padding: 7px 20px;
+            border: none;
+            border-radius: 6px;
+        }
+
+        .n{
+            background-color: #7bdff2;
+            width: 300px;
+            margin-top: 15px;
+            padding: 7px;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+    </style>
+
+    <script>
+        $(document).ready(()=>{
+            let array = [];
+
+            $(".pushbtn").click(()=>{
+                let num = prompt("Masukkan data untuk push:");
+                if(num != null && num != ""){
+                    array.push(num);
+                    console.log(array);
+                    panjang = array.length;
+                    $(".result").empty();
+                    for(let i=panjang; i > 0;i--){
+                        $(".result").append('<div class="n">'+array[i-1]+'</div>').hide().fadeIn(500);
+                    }  
+                } else {
+                    alert("Input tidak boleh null!");
+                };
+            })
+
+            $(".popbtn").click(()=>{
+                array.pop();
+                panjang = array.length;
+                $(".result").empty();
+                console.log(array);
+
+                for(let i=panjang; i > 0;i--){
+                    $(".result").append('<div class="n">'+array[i-1]+'</div>');
+                };
+            })
+        })
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h2>Data Structure - Stack Demo</h2>
+            <button class="pushbtn">Push</button>
+            <button class="popbtn">Pop</button>
+            <div class="result"></div>
+        </div>
+    </div>
+</body>
+</html>
