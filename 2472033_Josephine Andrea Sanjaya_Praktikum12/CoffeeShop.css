@@ -1,0 +1,52 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f2eb;
+}
+
+h1,p{
+    color: #3e2c23;
+    text-align: center;
+}
+
+#container{
+    display: flex;
+    justify-content: center;
+}
+
+.kartuKopi{
+    background-color: #fffaf3;
+    border: 1px solid #d8cfc4;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 10px;
+    border-radius: 7px;
+    width: 200px;
+    margin-right: 12px;
+}
+
+.gambar{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 7px;
+    
+}
+
+.judul,.desc,.harga{
+    margin: 0;
+    color:  #3e2c23;
+}
+
+.judul{
+    font-weight: bold;
+    margin-top: 7px;
+}
+
+.desc,.harga{
+    text-align: left;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.harga{
+    margin-bottom: 5px;
+}
