@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <link rel="stylesheet" href="CRUD.css">
+</head>
+<body>
+    <div class="mainContainer">
+        <div class="container">
+            <div class="firstSection">
+                <input type="text" placeholder="Nama Produk" class="aboveInput" id="namaProduk">
+                <input type="text" placeholder="Harga (Rp)" class="aboveInput" id="hargaProduk">
+                <input type="text" placeholder="Stok" class="aboveInput" id="stokProduk">
+            </div>
+            <textarea placeholder="Deskripsi Produk" class="middleInput" id="descProduk"></textarea>
+            <div class="div-btn">
+                <button class="btn" id="submitBtn">Tambah Produk</button>
+            </div>
+        </div>
+
+        <div class="bottomContainer">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nama Produk</th>
+                        <th>Harga (Rp)</th>
+                        <th>Deskripsi</th>
+                        <th>Stok</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="CRUD.js"></script>
+</body>
+</html>
